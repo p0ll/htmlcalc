@@ -1,0 +1,98 @@
+<html>
+<meta charset="UTF-8">
+<br>
+<div class="container">
+  <div class="jumbotron">
+    <head class="masthead">
+      <h1 class="masthead-heading">The Endowment Calculator</h1>
+      <h2 class="masthead-intro">for social impact</h2>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+      <!-- Optional theme -->
+      <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="slider-styles.css" media="screen" />
+    </head>
+  </div>
+</div>
+
+  <body>
+      <div class="row">
+        <div class="container">
+          <form>
+            <div id="calculator">
+              <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="amount">Investment amount</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">£</div>
+                    <input type=text id="amount" class="form-control" />
+                  </div>
+                </div>
+                  
+                <div class="form-group">
+                  <label class="control-label col-md-4" for="finrtn">Financial return</label>
+                  <div class="input-group">
+                    <input type=text id="finrtn" class="form-control"/>
+                    <div class="input-group-addon">%</div>
+                  </div>
+                </div>
+                  
+                <div class="form-group">
+                  <label class="control-label col-md-4" for="cost">Cost of investment</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">£</div>
+                    <input type=text id="cost" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-md-4" for="duration">Investment period</label>
+                  <div class="input-group">
+                    <input type=text id="duration" class="form-control" />
+                    <div class="input-group-addon">years</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-md-4" for="yearspergrant">Years per grant</label>
+                  <div class="input-group">
+                    <input type=text id="yearspergrant" class="form-control" />
+                    <div class="input-group-addon">years</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-md-4" for="simp">SIMP</label>
+                  <div class="input-group">
+                    <input class="slider" data-slider-max="100" data-slider-min="0" data-slider-value="25" type="text" id="simp">
+                      <div class="slider-horizontal" />
+                      <div class="slider-track">
+                      <div id="simp-display"></div></div>
+                  </div>
+                  <input class="btn btn-default" type="button" id="calculate" value="Calculate" />
+                  <input class="btn btn-default" type="button" id="refresh" value="Go again" />
+                </div>
+              
+                <div class="col-md-6">
+                  <div id="result-text"></div>
+                  <br>
+                  <font size="32"><div id="result"></div></font>
+                </div>
+            </div>
+          </div>
+           
+          </form>
+
+          <script language="javascript" type="text/javascript" src="jquery-1.11.2.js"></script>
+          <script src="calculate.js"></script>
+          <script src="refresh.js"></script>
+          <script src="main.js"></script>
+          <script src="plugin.js"></script>
+        </div>
+    </div>
+  </body>
+
+</html>
+
+<!-- Latest compiled and minified JavaScript for Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
