@@ -1,9 +1,11 @@
 <html>
 <meta charset="UTF-8">
 <br>
+<title>The Endowment Calculator</title>
 <div class="container">
   <div class="jumbotron">
     <head class="masthead">
+      <link href='http://fonts.googleapis.com/css?family=Dosis|News+Cycle|Josefin+Slab|Inconsolata' rel='stylesheet' type='text/css'>
       <h1 class="masthead-heading">The Endowment Calculator</h1>
       <h2 class="masthead-intro">for social impact</h2>
       <!-- Latest compiled and minified CSS -->
@@ -16,80 +18,167 @@
 </div>
 
   <body>
-      <div class="row">
-        <div class="container">
-          <form>
-            <div id="calculator">
-              <div class="col-md-6">
-                <div class="form-group">
-                    <label class="control-label col-md-4" for="amount">Investment amount</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">£</div>
-                    <input type=text id="amount" class="form-control" />
-                  </div>
-                </div>
-                  
-                <div class="form-group">
-                  <label class="control-label col-md-4" for="finrtn">Financial return</label>
-                  <div class="input-group">
-                    <input type=text id="finrtn" class="form-control"/>
-                    <div class="input-group-addon">%</div>
-                  </div>
-                </div>
-                  
-                <div class="form-group">
-                  <label class="control-label col-md-4" for="cost">Cost of investment</label>
-                  <div class="input-group">
-                    <div class="input-group-addon">£</div>
-                    <input type=text id="cost" class="form-control" />
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="control-label col-md-4" for="duration">Investment period</label>
-                  <div class="input-group">
-                    <input type=text id="duration" class="form-control" />
-                    <div class="input-group-addon">years</div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="control-label col-md-4" for="yearspergrant">Years per grant</label>
-                  <div class="input-group">
-                    <input type=text id="yearspergrant" class="form-control" />
-                    <div class="input-group-addon">years</div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="control-label col-md-4" for="simp">SIMP</label>
-                  <div class="input-group">
-                    <input class="slider" data-slider-max="100" data-slider-min="0" data-slider-value="25" type="text" id="simp">
-                      <div class="slider-horizontal" />
-                      <div class="slider-track">
-                      <div id="simp-display"></div></div>
-                  </div>
-                  <input class="btn btn-default" type="button" id="calculate" value="Calculate" />
-                  <input class="btn btn-default" type="button" id="refresh" value="Go again" />
-                </div>
+    <div class="container">       
+        <div id="calculator" class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4" for="amount">Investment amount</label>
+              <div class="input-group">
+                <div class="input-group-addon">£</div>
+                <input type=text id="amount" class="form-control" />
+              </div>
+            </div>
               
-                <div class="col-md-6">
-                  <div id="result-text"></div>
-                  <br>
-                  <font size="32"><div id="result"></div></font>
-                </div>
+            <div class="form-group">
+              <label class="control-label col-md-4" for="finrtn">Financial return</label>
+              <div class="input-group">
+                <input type=text id="finrtn" class="form-control"/>
+                <div class="input-group-addon">% p.a.</div>
+              </div>
+            </div>
+              
+            <div class="form-group">
+              <label class="control-label col-md-4" for="cost">Cost of investment</label>
+              <div class="input-group">
+                <input type=text id="cost" class="form-control" />
+                <div class="input-group-addon">% p.a.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-md-4" for="duration">Investment period</label>
+              <div class="input-group">
+                <input type=text id="duration" class="form-control" />
+                <div class="input-group-addon">years</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-md-4" for="yearspergrant">Years per grant</label>
+              <div class="input-group">
+                <input type=text id="yearspergrant" class="form-control" />
+                <div class="input-group-addon">years</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-md-1" for="simp">SIMP</label>
+              <span class="col-md-1"></span>
+              <span class="badge col-md-1" data-toggle="modal" data-target="#myModal">?</span>
+              <span class="col-md-1"></span>
+              <div class="input-group">
+                <input class="slider" data-slider-max="100" data-slider-min="0" data-slider-value="25" type="text" id="simp">
+                  <div class="slider-horizontal" />
+                  <div class="slider-track">
+                  <div id="simp-display"></div></div>
+              </div>
+              <input class="btn btn-default" type="button" id="calculate" value="Calculate" />
+              <input class="btn btn-default" type="button" id="refresh" value="Go again" />
+            </div>
+          <br>       
+          <div id="result-text"></div>
+          <br>
+          <font size="32"><div id="result"></div></font>  
+
+    </div> 
+
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+                <label class="control-label col-md-4" for="amount2">Investment amount</label>
+              <div class="input-group">
+                <div class="input-group-addon">£</div>
+                <input type=text id="amount2" class="form-control" />
+              </div>
+            </div>
+              
+            <div class="form-group">
+              <label class="control-label col-md-4" for="finrtn2">Financial return</label>
+              <div class="input-group">
+                <input type=text id="finrtn2" class="form-control"/>
+                <div class="input-group-addon">% p.a.</div>
+              </div>
+            </div>
+              
+            <div class="form-group">
+              <label class="control-label col-md-4" for="cost2">Cost of investment</label>
+              <div class="input-group">
+                <input type=text id="cost2" class="form-control" />
+                <div class="input-group-addon">% p.a.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-md-4" for="duration2">Investment period</label>
+              <div class="input-group">
+                <input type=text id="duration2" class="form-control" />
+                <div class="input-group-addon">years</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-md-4" for="yearspergrant2">Years per grant</label>
+              <div class="input-group">
+                <input type=text id="yearspergrant2" class="form-control" />
+                <div class="input-group-addon">years</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-md-1" for="simp2">SIMP</label> 
+              <span class="col-md-1"></span>
+              <span class="badge col-md-1" data-toggle="modal" data-target="#myModal">?</span>
+              <span class="col-md-1"></span>
+              <div class="input-group">
+                <input class="slider" data-slider-max="100" data-slider-min="0" data-slider-value="25" type="text" id="simp2">
+                  <div class="slider-horizontal" >
+                    <div class="slider-track">
+                    <div id="simp-display2"></div> 
+                  </div>
+              </div>
+              <input class="btn btn-default" type="button" id="calculate2" value="Calculate" />
+
+              <input class="btn btn-default" type="button" id="refresh2" value="Go again" />
+            </div>
+          <br>       
+          <div id="result-text2"></div>
+          <br>
+          <font size="32"><div id="result2"></div></font>
+        </div>
+          </div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">What is my SIMP?</h4>
+              </div>
+              <div class="modal-body">
+                <p>We have developed the following process for projecting SIMP (social impact):</p>
+                  <ol>
+                    <li>Decide a social impact to target – e.g. reducing the rate of reoffending.</li>
+                    <li>Establish how much it costs through a grant programme to achieve one unit of the social impact being targeted. e.g. to prevent one person from re-offending it costs £5,000.</li>
+                    <li>Work out how many units of SIMP would be achieved with the given amount of money available. e.g. £100,000 will prevent 20 people from reoffending.</li>
+                    <li>Project the equivalent unit of SIMP (e.g. how many people might be prevented from re-offending) through an investment. E.g. if the investment is made in a social enterprise that employs former prisoners, a £100,000 might enable it to prevent 10 people from reoffending.</li>
+                  </ol>
+                  <p>The SIMP value of this investment will therefore be 0.5 (20/10). This means the SIMP efficiency of the social investment versus the grant programme is 50%. If, on the other hand, the investment is made in a UK Equity Fund with nodiscernable impact on reoffending, the investment would have a SIMP value of 0.</p>
+              </div>
+ 
+              </div>
             </div>
           </div>
-           
-          </form>
-
-          <script language="javascript" type="text/javascript" src="jquery-1.11.2.js"></script>
-          <script src="calculate.js"></script>
-          <script src="refresh.js"></script>
-          <script src="main.js"></script>
-          <script src="plugin.js"></script>
         </div>
+
+      <script language="javascript" type="text/javascript" src="jquery-1.11.2.js"></script>
+      <script src="calculate.js"></script>
+      <script src="calculate2.js"></script>
+      <script src="refresh.js"></script>
+      <script src="refresh2.js"></script>
+      <script src="main.js"></script>
+      <script src="plugin.js"></script>
     </div>
+    
   </body>
 
 </html>

@@ -142,7 +142,7 @@
         mouseleave: $.proxy(this.hideTooltip, this)
       });
     } else {
-      this.tooltip.addClass('hide');
+      this.tooltip.addClass('show');
     }
   };
 
@@ -160,7 +160,7 @@
     },
 
     hideTooltip: function(){
-      if (this.inDrag === false) {
+      if (this.inDrag === true) {
         this.tooltip.removeClass('in');
       }
       this.over = false;

@@ -4,3 +4,11 @@
   });
 
 }).call(this);
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+$('#myModal').modal({
+  keyboard: false
+})

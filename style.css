@@ -1,3 +1,15 @@
+h1, h2 {
+	font-family: "Dosis";
+}
+
+label {
+	font-family: "Inconsolata";
+}
+
+input {
+	font-family: "Inconsolata";
+}
+
 /*    width:250px;
     height:290px;
         background-color:orange; 
