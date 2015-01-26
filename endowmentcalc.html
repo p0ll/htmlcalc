@@ -3,20 +3,22 @@
 <br>
 <title>The Endowment Calculator</title>
 <div class="container">
-  <div class="jumbotron">
+<!--  <div class="jumbotron"> -->
     <head class="masthead">
       <link href='http://fonts.googleapis.com/css?family=Dosis|News+Cycle|Josefin+Slab|Inconsolata' rel='stylesheet' type='text/css'>
       <h1 class="masthead-heading">The Endowment Calculator</h1>
-      <h2 class="masthead-intro">for social impact</h2>
+      <h2 class="masthead-intro">for social impact</h2> 
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
       <!-- Optional theme -->
       <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
       <link rel="stylesheet" type="text/css" href="slider-styles.css" media="screen" />
     </head>
-  </div>
+<!--  </div> -->
 </div>
-
+<br>
+<br>
+<br>
   <body>
     <div class="container">       
         <div id="calculator" class="row">
@@ -76,9 +78,9 @@
               <input class="btn btn-default" type="button" id="refresh" value="Go again" />
             </div>
           <br>       
-          <div id="result-text"></div>
-          <br>
-          <font size="32"><div id="result"></div></font>  
+          <div class="well">The social impact of this investment is:
+            <font size="12"><div id="result"></div></font>
+          </div>  
 
     </div> 
 
@@ -132,43 +134,66 @@
               <div class="input-group">
                 <input class="slider" data-slider-max="100" data-slider-min="0" data-slider-value="25" type="text" id="simp2">
                   <div class="slider-horizontal" >
-                    <div class="slider-track">
-                    <div id="simp-display2"></div> 
+                    <div class="slider-track"></div>
                   </div>
+                <input class="btn btn-default" type="button" id="calculate2" value="Calculate" />
+                <input class="btn btn-default" type="button" id="refresh2" value="Go again" />
               </div>
-              <input class="btn btn-default" type="button" id="calculate2" value="Calculate" />
-
-              <input class="btn btn-default" type="button" id="refresh2" value="Go again" />
+             <br>       
+             <div class="well">The social impact of this investment is:
+              <font size="32"><div id="result2"></div></font>
+             </div>
             </div>
-          <br>       
-          <div id="result-text2"></div>
-          <br>
-          <font size="32"><div id="result2"></div></font>
-        </div>
+
+          <div class="modal fade bs-example-modal-lg" id="introModal" role="dialog" aria-labelledby="introModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="introModalLabel">About the Endowment Calculator</h4>
+                </div>
+                <div class="modal-body">
+                  <h5>What is the Endowment Calculator?</h5>
+                  <p>This tool aims to help someone decide what the best use of money is when the options available are projected to generate both financial returns and social impact.</p>
+
+                  <h5>Who could it be useful for?</h5>
+                  <p>The tool could be useful to anyone involved in formulating an impact strategy for a charitable foundation, by acting as a lens through which to think about maximising social impact. The lens might also be useful for other investor organisations (such as those involved in managing pension funds or university endowments) who are considering the social impact of their decisions in addition to the financial ones.</p>
+
+                  <h5>Why has Cabinet Office made this tool? </h5>
+                  <p>The tool emerged from our recent work looking at foundations that are following “Total Impact approaches” for meeting the needs of their beneficiaries. A Total Impact approach is one where a foundation considers the social impact of all of all its activity before deciding which strategy for managing its resources will maximise its social impact.</p> 
+
+                  <p>Through this research, it became clear that deciding which investment option will generate the most social impact is difficult. One investment option, for example, may be projected to achieve a high financial return than another, but a lower level of social impact. Is a foundation better off making the investment that maximizes the size of the grant programme, or the one that leads to a smaller grant programme but creates social impact itself?</p> 
+
+                  <p>Our research did not uncover a tool which provides guidance for questions like this, so - working with experts in the field - we decided to see if we could create something ourselves. We hope you will take this in the spirit it is intended: we are not ourselves experts in this area and we appreciate that the tool simplifies complex questions. We hope that what we have created could, however, be useful in helping to frame conversations around which strategies create the most social impact. </p>
+
+                  <h5> Click <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/385846/Q_A_Total_Impact_calculator.pdf" target=_blank>here</a> to view the full guidance in a separate window.</h5>
+                </div>
+              </div>
+            </div>
           </div>
 
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">What is my SIMP?</h4>
-              </div>
-              <div class="modal-body">
-                <p>We have developed the following process for projecting SIMP (social impact):</p>
-                  <ol>
-                    <li>Decide a social impact to target – e.g. reducing the rate of reoffending.</li>
-                    <li>Establish how much it costs through a grant programme to achieve one unit of the social impact being targeted. e.g. to prevent one person from re-offending it costs £5,000.</li>
-                    <li>Work out how many units of SIMP would be achieved with the given amount of money available. e.g. £100,000 will prevent 20 people from reoffending.</li>
-                    <li>Project the equivalent unit of SIMP (e.g. how many people might be prevented from re-offending) through an investment. E.g. if the investment is made in a social enterprise that employs former prisoners, a £100,000 might enable it to prevent 10 people from reoffending.</li>
-                  </ol>
-                  <p>The SIMP value of this investment will therefore be 0.5 (20/10). This means the SIMP efficiency of the social investment versus the grant programme is 50%. If, on the other hand, the investment is made in a UK Equity Fund with nodiscernable impact on reoffending, the investment would have a SIMP value of 0.</p>
-              </div>
- 
+
+            <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">What is my SIMP?</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>We have developed the following process for projecting SIMP (social impact):</p>
+                      <ol>
+                        <li>Decide a social impact to target – e.g. reducing the rate of reoffending.</li>
+                        <li>Establish how much it costs through a grant programme to achieve one unit of the social impact being targeted. e.g. to prevent one person from re-offending it costs £5,000.</li>
+                        <li>Work out how many units of SIMP would be achieved with the given amount of money available. e.g. £100,000 will prevent 20 people from reoffending.</li>
+                        <li>Project the equivalent unit of SIMP (e.g. how many people might be prevented from re-offending) through an investment. E.g. if the investment is made in a social enterprise that employs former prisoners, a £100,000 might enable it to prevent 10 people from reoffending.</li>
+                      </ol>
+                      <p>The SIMP value of this investment will therefore be 0.5 (20/10). This means the SIMP efficiency of the social investment versus the grant programme is 50%. If, on the other hand, the investment is made in a UK Equity Fund with nodiscernable impact on reoffending, the investment would have a SIMP value of 0.</p>
+                  </div>
+     
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
       <script language="javascript" type="text/javascript" src="jquery-1.11.2.js"></script>
       <script src="calculate.js"></script>

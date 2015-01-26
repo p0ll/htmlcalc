@@ -13,8 +13,7 @@ $(document).ready(function () {
         var socImpGrant = (((amount * (Math.pow(temp, yearsPerGrant))) - amount) * (duration / yearsPerGrant) + amount);
         var socImpInv = (amount * (simp/100));
         var socialImpactPA = (socImpGrant + socImpInv);
-        $("#result-text2").html("The social impact of this investment is ");
-        $("#result2").html(socialImpactPA);
+        $("#result2").html(socialImpactPA.toFixed(0));
  // 			alert(socImpGrant)
  	   });
     

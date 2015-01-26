@@ -14,7 +14,7 @@ $(document).ready(function () {
         var socImpInv = (amount * (simp/100));
         var socialImpactPA = (socImpGrant + socImpInv);
         $("#result-text").html("The social impact of this investment is ");
-        $("#result").html(socialImpactPA);
+        $("#result").html(socialImpactPA.toFixed(0));
   //			alert(socImpGrant)
  	   });
     

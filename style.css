@@ -1,13 +1,37 @@
+
+
 h1, h2 {
+	text-align: center;
 	font-family: "Dosis";
 }
 
-label {
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 1.7em;
+}
+
+label, h4 {
 	font-family: "Inconsolata";
 }
 
 input {
 	font-family: "Inconsolata";
+}
+
+.well {
+	font-family: "Inconsolata";
+	background: white;
+}
+
+head, body {
+	background-color: C0FFED;
+}
+
+.jumbotron {
+		background-color: white;
 }
 
 /*    width:250px;

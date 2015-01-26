@@ -1,3 +1,9 @@
+
+$(window).load(function(){
+   $('#introModal').modal('show');
+ });
+
+
 (function() {
   $(function() {
     return $('.slider').slider();
@@ -9,6 +15,4 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 })
 
-$('#myModal').modal({
-  keyboard: false
-})
+
