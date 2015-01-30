@@ -13,6 +13,8 @@ $(window).load(function(){
 
 $(function () {
   $('[data-toggle="popover"]').popover()
-})
+});
+
+//$('#input').tooltip({ container: 'body' }) 
 
 

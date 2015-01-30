@@ -2,8 +2,10 @@ $(document).ready(function () {
 
     $("#calculate").click(function () {
         var amount = parseInt($("#amount").val(), 10);
-        var finRtn = $("#finrtn").val();
-        var cost = $("#cost").val();
+        var f = $("#finrtn").val();
+        var finRtn = (f/100)
+        var c = $("#cost").val();
+        var cost = (c/100)
         var duration = parseInt($("#duration").val(), 10);
         var yearsPerGrant = parseInt($("#yearspergrant").val(), 10);
         var simp = parseInt($("#simp").val(), 10);
@@ -13,9 +15,8 @@ $(document).ready(function () {
         var socImpGrant = (((amount * (Math.pow(temp, yearsPerGrant))) - amount) * (duration / yearsPerGrant) + amount);
         var socImpInv = (amount * (simp/100));
         var socialImpactPA = (socImpGrant + socImpInv);
-        $("#result-text").html("The social impact of this investment is ");
-        $("#result").html(socialImpactPA.toFixed(0));
-  //			alert(socImpGrant)
+ //       $("#result").html(socialImpactPA.toFixed(0));
+  			alert(cost)
  	   });
     
 });

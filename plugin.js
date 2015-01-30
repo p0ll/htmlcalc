@@ -27,7 +27,7 @@
                 '<div class="slider-handle"></div>'+
                 '<div class="slider-handle"></div>'+
               '</div>'+
-              '<div class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'+
+              '<div class="tooltip" data-container="body"><div class="tooltip-arrow" data-container="body"></div><div class="tooltip-inner" data-container="body"></div></div>'+
             '</div>')
               .insertBefore(this.element)
               .append(this.element);
