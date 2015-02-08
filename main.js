@@ -1,6 +1,14 @@
 
 $(window).load(function(){
    $('#introModal').modal('show');
+   $("#result").html("187889"); 
+   $("#result2").html("193008");
+   $('#calculate').hide();
+   $('#calculate2').hide();
+   $("#investmentName").html("Example Grant Programme");
+   $("#investmentName2").html("Example Social Investment")
+   $('#nameyourprogramme').hide()
+   $('#nameyourprogramme2').hide();
  });
 
 
@@ -15,6 +23,6 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 });
 
-//$('#input').tooltip({ container: 'body' }) 
+
 
 

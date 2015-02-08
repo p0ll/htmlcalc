@@ -22,19 +22,32 @@
   <body>
     <div class="container">       
         <div id="calculator" class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
+            <div id="investmentName">
+            </div>
+            <br>  
+
+            <form class="form-horizontal">
+              <div class="form-group" id="nameyourprogramme"> 
+                  <label class="control-label" for="name">Name your programme</label>
+                  <div class='col-s-1'>
+                  <input class="form-control" type=text id="name"  value="10"/>
+                  </div>
+              </div>
+            </form>
+         
             <div class="form-group">
                 <label class="control-label col-md-4" for="amount">Investment amount</label>
               <div class="input-group">
                 <div class="input-group-addon">£</div>
-                <input type=text id="amount" class="form-control" />
+                <input type=text id="amount" class="form-control" value="100000"/>
               </div>
             </div>
               
             <div class="form-group">
               <label class="control-label col-md-4" for="finrtn">Financial return</label>
               <div class="input-group">
-                <input type=text id="finrtn" class="form-control"/>
+                <input type=text id="finrtn" class="form-control" value="6"/>
                 <div class="input-group-addon">% p.a.</div>
               </div>
             </div>
@@ -42,7 +55,7 @@
             <div class="form-group">
               <label class="control-label col-md-4" for="cost">Cost of investment</label>
               <div class="input-group">
-                <input type=text id="cost" class="form-control" />
+                <input type=text id="cost" class="form-control" value="1" />
                 <div class="input-group-addon">% p.a.</div>
               </div>
             </div>
@@ -50,7 +63,7 @@
             <div class="form-group">
               <label class="control-label col-md-4" for="duration">Investment period</label>
               <div class="input-group">
-                <input type=text id="duration" class="form-control" />
+                <input type=text id="duration" class="form-control" value="10" />
                 <div class="input-group-addon">years</div>
               </div>
             </div>
@@ -58,7 +71,7 @@
             <div class="form-group">
               <label class="control-label col-md-4" for="yearspergrant">Years per grant</label>
               <div class="input-group">
-                <input type=text id="yearspergrant" class="form-control" />
+                <input type=text id="yearspergrant" class="form-control" value="10" />
                 <div class="input-group-addon">years</div>
               </div>
             </div>
@@ -75,7 +88,7 @@
                   <div id="simp-display"></div></div>
               </div>
               <input class="btn btn-default" type="button" id="calculate" value="Calculate" />
-              <input class="btn btn-default" type="button" id="refresh" value="Go again" />
+              <input class="btn btn-default" type="button" id="refresh" value="Reset" />
             </div>
           <br>       
           <div class="well">The social impact of this investment is:
@@ -85,19 +98,31 @@
     </div> 
 
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
+          <div id="investmentName2">
+          </div>
+          <br>
+          
+          <div class="form-group" id="nameyourprogramme2">
+                <label class="control-label col-md-4">Name your programme</label>
+              <div class="input-group">
+                <div class="input-group-addon">£</div>
+                <input type=text id="input-name2" class="form-control" value="100000"/>
+              </div>
+            </div>
+
           <div class="form-group">
                 <label class="control-label col-md-4" for="amount2">Investment amount</label>
               <div class="input-group">
                 <div class="input-group-addon">£</div>
-                <input type=text id="amount2" class="form-control" />
+                <input type=text id="amount2" class="form-control" value="100000"/>
               </div>
             </div>
               
             <div class="form-group">
               <label class="control-label col-md-4" for="finrtn2">Financial return</label>
               <div class="input-group">
-                <input type=text id="finrtn2" class="form-control"/>
+                <input type=text id="finrtn2" class="form-control" value="3.5"/>
                 <div class="input-group-addon">% p.a.</div>
               </div>
             </div>
@@ -105,7 +130,7 @@
             <div class="form-group">
               <label class="control-label col-md-4" for="cost2">Cost of investment</label>
               <div class="input-group">
-                <input type=text id="cost2" class="form-control" />
+                <input type=text id="cost2" class="form-control" value="1"/>
                 <div class="input-group-addon">% p.a.</div>
               </div>
             </div>
@@ -113,7 +138,7 @@
             <div class="form-group">
               <label class="control-label col-md-4" for="duration2">Investment period</label>
               <div class="input-group">
-                <input type=text id="duration2" class="form-control" />
+                <input type=text id="duration2" class="form-control" value="10"/>
                 <div class="input-group-addon">years</div>
               </div>
             </div>
@@ -121,7 +146,7 @@
             <div class="form-group">
               <label class="control-label col-md-4" for="yearspergrant2">Years per grant</label>
               <div class="input-group">
-                <input type=text id="yearspergrant2" class="form-control" />
+                <input type=text id="yearspergrant2" class="form-control" value="10"/>
                 <div class="input-group-addon">years</div>
               </div>
             </div>
@@ -132,12 +157,12 @@
               <span class="badge col-md-1" data-toggle="modal" data-target="#myModal">?</span>
               <span class="col-md-1"></span>
               <div class="input-group" data-container="body">
-                <input class="slider" data-slider-max="100" data-slider-min="0" data-slider-value="25"  type="text" id="simp2">
+                <input class="slider" data-slider-max="100" data-slider-min="0" data-slider-value="65"  type="text" id="simp2">
                   <div class="slider-horizontal" >
                     <div class="slider-track"></div>
                   </div>
                 <input class="btn btn-default" type="button" id="calculate2" value="Calculate" />
-                <input class="btn btn-default" type="button" id="refresh2" value="Go again" />
+                <input class="btn btn-default" type="button" id="refresh2" value="Reset" />
               </div>
              <br>       
              <div class="well">The social impact of this investment is:
@@ -183,12 +208,29 @@
                   <div class="modal-body">
                     <p>We have developed the following process for projecting SIMP (social impact):</p>
                       <ol>
-                        <li>Decide a social impact to target – e.g. reducing the rate of reoffending.</li>
-                        <li>Establish how much it costs through a grant programme to achieve one unit of the social impact being targeted. e.g. to prevent one person from re-offending it costs £5,000.</li>
-                        <li>Work out how many units of SIMP would be achieved with the given amount of money available. e.g. £100,000 will prevent 20 people from reoffending.</li>
-                        <li>Project the equivalent unit of SIMP (e.g. how many people might be prevented from re-offending) through an investment. E.g. if the investment is made in a social enterprise that employs former prisoners, a £100,000 might enable it to prevent 10 people from reoffending.</li>
+                        <li>Decide a social impact to target</li>
+                        <li>Establish how much it costs through a grant programme to achieve one unit of the social impact being targeted.</li>
+                        <li>Work out how many units of SIMP would be achieved with the given amount of money available.</li>
+                        <li>Project the equivalent unit of SIMP through an investment, by dividing the outcome of step 2 by the outcome of step 3 and multiplying by 100. This will give you your SIMP value.</li>
                       </ol>
-                      <p>The SIMP value of this investment will therefore be 0.5 (20/10). This means the SIMP efficiency of the social investment versus the grant programme is 50%. If, on the other hand, the investment is made in a UK Equity Fund with nodiscernable impact on reoffending, the investment would have a SIMP value of 0.</p>
+                      <p></p>
+                  
+
+                  <a class="btn btn-default" data-toggle="collapse" href="#simpExample" aria-expanded="false" aria-controls="simpExample">See a worked example...</a>
+
+                  <div class="collapse" id="simpExample">
+                    <br>
+                    <div class="well"> 
+                      <p>The social impact I wish to target is reducing the rate of reoffending.</p>
+                      <p>Through a grant programme it costs £5,000 to prevent one person from re-ofending. </p>
+                      <p>Therefore £100,000 will prevent 20 people from reoffending. This is 20 SIMP units</p>
+                      <p>If, alternatively, the investment is made into a social enterprise that employs former prisoners, £100,000 might enable it to prevent 10 people from reoffending. This is 10 SIMP units.</p>
+                      <p>
+                        <pre>(20 / 10) x 100 = 50</pre>
+                      </p>
+                      <p>The SIMP value of this investment will therefore be 50. This means the SIMP efficiency of the social investment versus the grant programme is 50%. If, on the other hand, the investment is made in a UK Equity Fund with nodiscernable impact on reoffending, the investment would have a SIMP value of 0.</p>
+                    </div>
+                    </div>
                   </div>
      
                 </div>

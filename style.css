@@ -19,7 +19,6 @@ label, h4 {
 
 input {
 	font-family: "Inconsolata";
-	z-index: -10;
 }
 
 .well {
@@ -35,8 +34,8 @@ head, body {
 		background-color: white;
 }
 
-.modal {
-	z-index: 10;
+.investmentName {
+	font-family: "Inconsolata";
 }
 
 /*    width:250px;

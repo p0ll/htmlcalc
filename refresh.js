@@ -9,7 +9,8 @@ $(document).ready(function () {
         $("#simp").val('');
         $("#result-text").html('');
         $("#result").html('');
-
+        $('#calculate').show();
+        $('#investmentName').hide();
  	   });
     
 });
