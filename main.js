@@ -6,22 +6,42 @@ $(window).load(function(){
    $('#calculate').hide();
    $('#calculate2').hide();
    $("#investmentName").html("Example Grant Programme");
-   $("#investmentName2").html("Example Social Investment")
-   $('#nameyourprogramme').hide()
+   $("#investmentName2").html("Example Social Investment");
+   $('#nameyourprogramme').hide();
    $('#nameyourprogramme2').hide();
  });
 
-
-(function() {
-  $(function() {
-    return $('.slider').slider();
-  });
-
-}).call(this);
-
-$(function () {
-  $('[data-toggle="popover"]').popover()
+$(document).ready( function() {
+    $('#simpslider2').slider({
+      min: 0,
+      max: 100,
+      value: 25,
+      step: 1,
+      slide: function( event, ui ) {
+        $( "#simpvalue2" ).val( ui.value );
+        calculate();
+        console.log(ui.value)
+      }
+    });
+//    $( "#simpvalue2" ).val( $( "#simpslider2" ).slider( "value" ));
 });
+
+//jQuery.noConflict();
+//(function($) {
+//    $(".slider").slider//({
+ //     min: 0,
+ //     max: 100,
+ //     value: [40]
+ //     slide: function( event, ui ) {
+ //       $( "#simpint" ).val(ui.value[ 0 ]);
+ //     }
+ //   })
+//(jQuery);
+//})
+
+//$(function () {
+//  $('[data-toggle="popover"]').popover()
+//});
 
 
 

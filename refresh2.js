@@ -6,11 +6,25 @@ $(document).ready(function () {
         $("#cost2").val('');
         $("#duration2").val('');
         $("#yearspergrant2").val('');
-        $("#simp2").val('');
+        $("#simpvalue2").val('');
         $("#result-text2").html('');
         $("#result2").html('');
         $('#calculate2').show();
         $('#investmentName2').hide();
+        $('#nameyourprogramme2').show();
+        number = $('#simpvalue2').val();
+  //      alert(number);
  	   });
+
+    $('#simpslider2').slider({
+      min: 0,
+      max: 100,
+      value: 25,
+      step: 1,
+      slide: function( event, ui ) {
+        $( "#simpvalue2" ).val(ui.value);
+      }
+    });
+    $( "#simpvalue2" ).val( $( "#simpslider2" ).slider( "value" ));
     
 });

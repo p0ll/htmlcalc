@@ -38,6 +38,10 @@ head, body {
 	font-family: "Inconsolata";
 }
 
+/*.row {
+	border: 3px solid red;
+}
+
 /*    width:250px;
     height:290px;
         background-color:orange; 

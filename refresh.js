@@ -11,6 +11,7 @@ $(document).ready(function () {
         $("#result").html('');
         $('#calculate').show();
         $('#investmentName').hide();
+        $('#nameyourprogramme').show();
  	   });
     
 });

@@ -15,9 +15,7 @@ $(document).ready(function () {
         var socImpGrant = (((amount * (Math.pow(temp, yearsPerGrant))) - amount) * (duration / yearsPerGrant) + amount);
         var socImpInv = (amount * (simp/100));
         var socialImpactPA = (socImpGrant + socImpInv);
-        $("#example").html()
         $("#result").html(socialImpactPA.toFixed(0));
-        $('#investmentName').html('#input-name')
  // 			alert(cost)
  	   });
     

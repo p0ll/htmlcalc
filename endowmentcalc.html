@@ -12,7 +12,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
       <!-- Optional theme -->
       <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-      <link rel="stylesheet" type="text/css" href="slider-styles.css" media="screen" />
+      <link rel="stylesheet" href="jquery-ui.min.css">
     </head>
 <!--  </div> -->
 </div>
@@ -22,19 +22,17 @@
   <body>
     <div class="container">       
         <div id="calculator" class="row">
-          <div class="col-md-4">
-            <div id="investmentName">
-            </div>
+          <div class="col-md-6">
+            <h4 id="investmentName">
+            </h4>
             <br>  
 
-            <form class="form-horizontal">
-              <div class="form-group" id="nameyourprogramme"> 
-                  <label class="control-label" for="name">Name your programme</label>
-                  <div class='col-s-1'>
-                  <input class="form-control" type=text id="name"  value="10"/>
-                  </div>
-              </div>
-            </form>
+            <div class="form-group" id="nameyourprogramme"> 
+                <label class="control-label" for="name">Name your programme</label>
+                <div class='col-s-1'>
+                <input class="form-control" type=text id="name" />
+                </div>
+            </div>
          
             <div class="form-group">
                 <label class="control-label col-md-4" for="amount">Investment amount</label>
@@ -81,12 +79,9 @@
               <span class="col-md-1"></span>
               <span class="badge col-md-1" data-toggle="modal" data-target="#myModal">?</span>
               <span class="col-md-1"></span>
-              <div class="input-group" data-container="body">
-                <input class="slider" data-slider-max="100" data-slider-min="0" data-slider-value="25" type="text" id="simp">
-                  <div class="slider-horizontal" />
-                  <div class="slider-track">
-                  <div id="simp-display"></div></div>
-              </div>
+                <div class="slider" id="simpslider">
+                  <div id="simp-display"></div>
+                </div>
               <input class="btn btn-default" type="button" id="calculate" value="Calculate" />
               <input class="btn btn-default" type="button" id="refresh" value="Reset" />
             </div>
@@ -97,19 +92,18 @@
 
     </div> 
 
-        </div>
-        <div class="col-md-4">
-          <div id="investmentName2">
-          </div>
+        <div class="col-md-6">
+          <h4 id="investmentName2">
+          </h4>
           <br>
           
-          <div class="form-group" id="nameyourprogramme2">
-                <label class="control-label col-md-4">Name your programme</label>
-              <div class="input-group">
-                <div class="input-group-addon">£</div>
-                <input type=text id="input-name2" class="form-control" value="100000"/>
-              </div>
+            <div class="form-group" id="nameyourprogramme2"> 
+                <label class="control-label" for="name">Name your programme</label>
+                <div class='col-s-1'>
+                <input class="form-control" type=text id="name2"/>
+                </div>
             </div>
+          
 
           <div class="form-group">
                 <label class="control-label col-md-4" for="amount2">Investment amount</label>
@@ -152,15 +146,18 @@
             </div>
 
             <div class="form-group">
-              <label class="control-label col-md-1" for="simp2">SIMP</label> 
+              <label class="control-label col-md-1" for="simpvalue2">SIMP</label> 
               <span class="col-md-1"></span>
               <span class="badge col-md-1" data-toggle="modal" data-target="#myModal">?</span>
               <span class="col-md-1"></span>
-              <div class="input-group" data-container="body">
-                <input class="slider" data-slider-max="100" data-slider-min="0" data-slider-value="65"  type="text" id="simp2">
-                  <div class="slider-horizontal" >
-                    <div class="slider-track"></div>
-                  </div>
+              <script language="javascript" type="text/javascript" src="jquery-1.11.2.js"></script>
+              <script type= "text/javascript"src="calculate2.js"></script>
+              <div class="col-md-6" id="simpslider2" >
+                </div>
+                <div class="col-md-0.6"></div>
+                <input class="col-md-1" id="simpvalue2" type="text" readonly style="border:0; color:#f6931f; font-weight:bold; font-size: 1.2em; background-color:C0FFED"></input>
+                <br>
+                <br>
                 <input class="btn btn-default" type="button" id="calculate2" value="Calculate" />
                 <input class="btn btn-default" type="button" id="refresh2" value="Reset" />
               </div>
@@ -169,6 +166,7 @@
               <font size="32"><div id="result2"></div></font>
              </div>
             </div>
+      </div>
 
           <div class="modal fade bs-example-modal-lg" id="introModal" role="dialog" aria-labelledby="introModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -238,12 +236,14 @@
             </div>
 
       <script language="javascript" type="text/javascript" src="jquery-1.11.2.js"></script>
+      <script src="jquery-ui.min.js"></script> 
+      <script src="main.js"></script>
       <script src="calculate.js"></script>
       <script src="calculate2.js"></script>
       <script src="refresh.js"></script>
       <script src="refresh2.js"></script>
-      <script src="main.js"></script>
-      <script src="plugin.js"></script>
+  <!--    <script src="plugin.js"></script> -->
+<!-- <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script> -->
     </div>
     
   </body>
