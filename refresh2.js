@@ -9,11 +9,9 @@ $(document).ready(function () {
         $("#simpvalue2").val('');
         $("#result-text2").html('');
         $("#result2").html('');
-        $('#calculate2').show();
-        $('#investmentName2').hide();
-        $('#nameyourprogramme2').show();
-        number = $('#simpvalue2').val();
-  //      alert(number);
+        $("#calculate2").show();
+        $("#investmentName2").hide();
+        $("#nameyourprogramme2").show();
  	   });
 
     $('#simpslider2').slider({
